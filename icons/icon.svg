@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Wheat ear + one diagonal line + magnifying glass. Deliberately not a round
+       seal or the crossed-grain trademark, so it does not read as an official approval mark. -->
+  <symbol id="mark" viewBox="0 0 64 64">
+    <defs>
+      <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#1fa59a"/>
+        <stop offset="1" stop-color="#1d7a55"/>
+      </linearGradient>
+    </defs>
+    <rect width="64" height="64" rx="15" fill="url(#bg)"/>
+    <!-- wheat ear (cream) -->
+    <g fill="#f6eedb" transform="rotate(-18 27 30)">
+      <rect x="25.6" y="20" width="2.8" height="31" rx="1.4"/>
+      <ellipse cx="27" cy="12.5" rx="3" ry="5"/>
+      <ellipse cx="22.4" cy="19" rx="3.2" ry="5.4" transform="rotate(-28 22.4 19)"/>
+      <ellipse cx="31.6" cy="19" rx="3.2" ry="5.4" transform="rotate(28 31.6 19)"/>
+      <ellipse cx="22.4" cy="27.5" rx="3.2" ry="5.4" transform="rotate(-28 22.4 27.5)"/>
+      <ellipse cx="31.6" cy="27.5" rx="3.2" ry="5.4" transform="rotate(28 31.6 27.5)"/>
+      <ellipse cx="22.6" cy="36" rx="3" ry="5" transform="rotate(-28 22.6 36)"/>
+      <ellipse cx="31.4" cy="36" rx="3" ry="5" transform="rotate(28 31.4 36)"/>
+    </g>
+    <!-- single diagonal line across the wheat, cut out from the background -->
+    <path d="M11 44 41 10" stroke="#1c8a73" stroke-width="7.5" stroke-linecap="round"/>
+    <path d="M11 44 41 10" stroke="#f6eedb" stroke-width="3.6" stroke-linecap="round"/>
+    <!-- magnifying glass -->
+    <path d="M50.5 50.5 57 57" stroke="#1c6f4c" stroke-width="9" stroke-linecap="round"/>
+    <path d="M50.5 50.5 57 57" stroke="#f6eedb" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="43" cy="43" r="10.5" fill="#1c6f4c"/>
+    <circle cx="43" cy="43" r="8.6" fill="#7fd6c8" fill-opacity=".55" stroke="#f6eedb" stroke-width="3.4"/>
+    <path d="M38.6 40.2a5.6 5.6 0 0 1 4.4-3" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" fill="none" opacity=".85"/>
+  </symbol>
+  <use href="#mark"/>
+</svg>

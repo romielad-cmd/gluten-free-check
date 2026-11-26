@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>מדריך – בודק ללא גלוטן</title>
+<meta name="description" content="איך משתמשים באפליקציית בודק ללא גלוטן לחולי צליאק: התקנה, סריקה, חיפוש, צבעים ומקור ההחלטה.">
+<meta name="theme-color" content="#155c54">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .guide { max-width: 680px; margin: 0 auto; padding: 8px 16px 40px; }
+  .guide h2 { font-size: 19px; margin: 26px 0 8px; display: flex; align-items: center; gap: 8px; }
+  .guide h2 .n { flex: none; width: 28px; height: 28px; border-radius: 50%; background: var(--brand); color: #fff;
+    display: grid; place-items: center; font-size: 15px; }
+  .guide p, .guide li { font-size: 16px; line-height: 1.6; }
+  .guide ol, .guide ul { padding-inline-start: 22px; margin: 6px 0; }
+  .guide ul ul { margin: 4px 0; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; margin: 10px 0; box-shadow: var(--shadow); }
+  .colors { display: grid; gap: 8px; }
+  .colors > div { display: grid; grid-template-columns: 14px 1fr; gap: 10px; align-items: start; }
+  .colors .dot { width: 14px; height: 14px; border-radius: 50%; margin-top: 5px; background: var(--c); }
+  .str { display: grid; grid-template-columns: auto 1fr; gap: 4px 10px; align-items: baseline; }
+  .str b { color: var(--ok); letter-spacing: 1px; }
+  .str b.m { color: #b7860b; } .str b.w { color: var(--unk); }
+  .important { border: 2px solid #e0a100; background: #fff4d6; color: #4a3600; border-radius: 14px; padding: 12px 14px; margin-top: 26px; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .important { background: #3a2e0c; color: #ffe7a3; } }
+  .back { display: inline-flex; align-items: center; gap: 6px; margin-top: 22px; padding: 12px 20px; border-radius: 12px;
+    background: var(--brand); color: #fff; text-decoration: none; font-weight: 700; }
+  .tag { display: inline-block; font-size: 12px; font-weight: 700; color: var(--ok); background: var(--ok-bg);
+    border: 1px solid var(--ok); border-radius: 6px; padding: 0 5px; }
+  .seg { display: inline-block; background: var(--brand); color: #fff; border-radius: 8px; padding: 0 7px; font-size: 14px; font-weight: 600; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <svg class="logo" viewBox="0 0 64 64" aria-hidden="true"><use href="icons/icon.svg#mark"/></svg>
+    <div><h1>מדריך למשתמש</h1><div class="data-info">בודק ללא גלוטן לחולי צליאק</div></div>
+  </div>
+</header>
+<main class="guide">
+  <p>האפליקציה עוזרת לאתר במהירות מוצרים בסופר ש<b>סומנו כ"ללא גלוטן"</b> במקורות המידע. היא כוללת כ-29,000 מוצרים מ<b>רמי לוי, שופרסל, יוחננוף, יש חסד ואושר עד</b>, ועובדת <b>גם בלי קליטה</b>.</p>
+  <p class="muted">האפליקציה היא כלי עזר בלבד ואינה מאשרת שמוצר כלשהו נטול גלוטן. פרטים בסוף הדף.</p>
+  <h2><span class="n">1</span>התקנה (פעם אחת)</h2>
+  <div class="card">
+    <ol>
+      <li>פותחים את הקישור <b>בדפדפן</b>: Chrome באנדרואיד או Safari באייפון. אם הקישור נפתח מתוך וואטסאפ, פייסבוק או ג'ימייל, צריך לבחור "פתח בדפדפן".</li>
+      <li>לוחצים על כפתור <b>"התקנה"</b> בפס הירוק למעלה. באנדרואיד נפתח חלון התקנה. באייפון ובדפדפנים אחרים מופיעות הוראות מותאמות.</li>
+      <li>במסך הבית יופיע האייקון <img src="icons/icon-192.png" alt="" width="22" height="22" style="vertical-align:-5px;border-radius:5px"> (שיבולת עם קו אלכסוני וזכוכית מגדלת). בפתיחה הראשונה צריך אינטרנט כדי להוריד את המאגר.</li>
+    </ol>
+  </div>
+  <h2><span class="n">2</span>בכניסה הראשונה</h2>
+  <div class="card">
+    <ul>
+      <li>מופיע החלון <b>"חשוב לדעת לפני שמתחילים"</b>. מסמנים <b>"קראתי והבנתי את תנאי השימוש והגבלת האחריות"</b> ולוחצים <b>"מאשר וממשיך לאתר"</b>. הכפתור פעיל רק אחרי הסימון.</li>
+      <li>האישור נשמר בטלפון. החלון יופיע שוב אם התנאים משתנים, או אם מנקים את נתוני הדפדפן.</li>
+      <li>בראש המסך מופיע תמיד הפס הצהוב <b>"כלי עזר בלבד – אינו אישור למוצרים"</b>, עם קישור לתנאי השימוש.</li>
+    </ul>
+  </div>
+  <h2><span class="n">3</span>איך בודקים מוצר?</h2>
+  <div class="card">
+    <ul>
+      <li><b>סריקה:</b> לוחצים <b>"סריקה"</b> ומכוונים את המצלמה לברקוד. בפעם הראשונה צריך לאשר גישה למצלמה. אם הסריקה לא מצליחה, מקלידים את הברקוד בשדה בתחתית מסך הסריקה.</li>
+      <li><b>חיפוש:</b> מקלידים שם מוצר, מותג או ברקוד. מתחת לשדה מופיעות עד 5 הצעות. לוחצים על הצעה כדי לפתוח את המוצר, או על <b>"הצג את כל התוצאות ↓"</b> כדי לראות את כל הרשימה. הרשימה נסגרת גם כשמגללים את התוצאות.</li>
+      <li><b>עיון:</b> בלי חיפוש, בוחרים רשת, מחלקה וסוג מוצר, או לוחצים על אחת המחלקות במסך הראשי.</li>
+    </ul>
+  </div>
+  <h2><span class="n">4</span>מה אומרים הצבעים?</h2>
+  <div class="card colors">
+    <div class="st-marked"><span class="dot"></span><span><b>ירוק – סומן ללא גלוטן במקור המידע.</b> המוצר מופיע במידע ללא גלוטן של היצרן (מסומן <span class="tag">יצרן ✓</span>), או שיש לו סימון "ללא גלוטן" אצל היצרן או הרשת.</span></div>
+    <div class="st-simple"><span class="dot"></span><span><b>כחול – מוצר פשוט.</b> עד 3 רכיבים בלי קמח, או מוצר טרי כמו פירות, ירקות, ביצים ובשר. אין עליו סימון "ללא גלוטן", וההערכה היא שהחשש לגלוטן נמוך.</span></div>
+    <div class="st-contains"><span class="dot"></span><span><b>אדום – לא מתאים.</b> מכיל או עלול להכיל גלוטן, יש בו רכיב עם גלוטן, או שיש נתונים סותרים.</span></div>
+    <div class="st-unknown"><span class="dot"></span><span><b>אפור – לא נבדק.</b> אין מספיק מידע כדי לקבוע, למשל מוצר שנמכר רק באושר עד.</span></div>
+  </div>
+  <p><b>מה להציג:</b> בוחרים למעלה בין <span class="seg">מסומן ללא גלוטן</span> (ירוק בלבד), <span class="seg">מסומן + פשוט</span> (ירוק וכחול) ו<span class="seg">הכל</span>. האפליקציה זוכרת את הבחירה. מי שלא סומך על הערכת המוצרים הפשוטים יכול להציג ירוק בלבד.</p>
+  <h2><span class="n">5</span>דף המוצר – על מה מבוסס הסימון?</h2>
+  <div class="card">
+    <p>בראש הדף מופיע הסטטוס, למשל <b>"סומן ללא גלוטן במקור המידע"</b> או <b>"מופיע במידע ללא גלוטן של היצרן"</b>, יחד עם הסיבה.</p>
+    <p>בכל מוצר ירוק או כחול מופיע <b>"מקור המידע · נכון ל-תאריך"</b>, עם עוצמה לכל מקור:</p>
+    <div class="str">
+      <b>●●●</b><span><b>חזק:</b> רשימת ללא גלוטן רשמית של היצרן, הצהרת היצרן, או סימון "ללא גלוטן" במידע התזונתי של היצרן.</span>
+      <b class="m">●●○</b><span><b>בינוני:</b> סימון "ללא גלוטן" של הרשת, או ששם המוצר או תיאורו כוללים "ללא גלוטן".</span>
+      <b class="w">●○○</b><span><b>חלש:</b> המוצר משויך לקטגוריית "ללא גלוטן" באתר, או הערכה לפי רשימת הרכיבים.</span>
+    </div>
+    <p>כשהמידע מגיע מהיצרן מוצגת קופסה ירוקה <b>"מקור: היצרן"</b>, ובה:</p>
+    <ul>
+      <li>השם שבו המוצר מופיע ברשימת היצרן;</li>
+      <li>קישור לדף היצרן;</li>
+      <li>הערות היצרן, למשל "פחות מ-20ppm גלוטן" או "יש לברור לפני השימוש" בקטניות ובאורז.</li>
+    </ul>
+    <p><b>⚠ אזהרה צהובה</b> מופיעה כשרשת מציינת מידע שונה מהיצרן, למשל "עלול להכיל". במקרה כזה הסטטוס נקבע לפי היצרן, אבל כדאי לשים לב ולבדוק את האריזה.</p>
+    <p>עוד בדף המוצר: רכיבים, אלרגנים ("מכיל" ו"עלול להכיל"), הרשתות שבהן המוצר נמכר ומחירו בכל אחת, וקישור לאתר הרשת.</p>
+  </div>
+  <h2><span class="n">6</span>מקורות המידע</h2>
+  <div class="card">
+    <ul>
+      <li><b>היצרנים (גוברים על הרשתות):</b>
+        <ul>
+          <li>רשימות ללא גלוטן רשמיות של <b>אסם-נסטלה</b> ו<b>מיה</b>.</li>
+          <li>הצהרת מיה שכל מוצר שלה עם כשרות לפסח נטול גלוטן.</li>
+          <li>הצהרות <b>סוגת</b> ו<b>סנפרוסט</b>: מוצר ללא אזהרת אלרגנים הוא ללא גלוטן.</li>
+          <li>הצהרת <b>עוף ירושלים</b> לגבי מוצרי 100% בקר.</li>
+        </ul>
+        ברשימות היצרנים אין ברקודים, ולכן ההתאמה למוצר נעשית לפי מותג ושם.</li>
+      <li><b>הרשתות:</b> רכיבים, אלרגנים וסימוני "ללא גלוטן" מאתרי רמי לוי, שופרסל ויוחננוף.</li>
+      <li><b>יש חסד ואושר עד:</b> זמינות ומחיר בלבד, כי באתרים שלהן אין מידע על רכיבים.</li>
+      <li>מספיק ש<b>רשת אחת</b> מציינת "מכיל" או "עלול להכיל" גלוטן כדי שהמוצר יסומן אדום, אלא אם הוא מופיע במידע ללא גלוטן של היצרן.</li>
+    </ul>
+  </div>
+  <h2><span class="n">7</span>עדכונים ועבודה בלי אינטרנט</h2>
+  <div class="card">
+    <ul>
+      <li>המאגר נשמר בטלפון, ולכן אפשר לחפש ולסרוק <b>גם בלי קליטה</b>, למשל בתוך הסופר. גם המדריך ותנאי השימוש זמינים בלי אינטרנט.</li>
+      <li>הנתונים מתעדכנים <b>בתחילת כל חודש</b>. כשיש אינטרנט, האפליקציה מורידה את העדכון לבד, ואין צורך להתקין מחדש.</li>
+      <li>תאריך הנתונים מופיע בראש המסך. אם הנתונים ישנים מדי, תופיע הודעה. לבדיקה ידנית לוחצים על "בדיקת עדכון נתונים" בתחתית המסך.</li>
+      <li>כפתור <b>"?"</b> בראש המסך פותח את המדריך הזה.</li>
+    </ul>
+  </div>
+  <div class="important">
+    <b>⚠️ חשוב לזכור:</b> האפליקציה היא <b>כלי עזר בלבד</b>. היא אינה מקור מידע מוסמך, ואינה מאשרת שמוצר כלשהו נטול גלוטן או מתאים לחולי צליאק. המידע נאסף אוטומטית מאתרי הרשתות והיצרנים, עלול לכלול טעויות, ויצרנים משנים מתכונים. <b>תמיד בודקים את הסימון והרכיבים על גבי האריזה לפני קנייה ואכילה.</b>
+    <br><a href="terms.html">תנאי שימוש והגבלת אחריות ›</a>
+  </div>
+  <h2><span class="n">8</span>יצירת קשר</h2>
+  <div class="card"><div class="contact" id="contact"><h3>יוצר האפליקציה ויצירת קשר</h3><p><b>אלעד רומי</b></p><p><a href="mailto:romielad@gmail.com">romielad@gmail.com</a> · <a href="tel:+972503115159" dir="ltr">050-3115159</a></p><p class="muted">לדיווח על טעות במוצר, הצעה או שאלה. בדיווח על מוצר כדאי לציין את הברקוד.</p></div></div>
+  <p class="muted">© 2026 אלעד רומי. כל הזכויות שמורות.</p>
+  <a class="back" href="./">‹ חזרה לאפליקציה</a>
+</main>
+</body>
+</html>

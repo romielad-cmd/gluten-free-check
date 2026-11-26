@@ -1,0 +1,19 @@
+{
+  "name": "בודק ללא גלוטן",
+  "short_name": "ללא גלוטן",
+  "description": "בדיקת מוצרים ללא גלוטן לחולי צליאק – עובד גם בלי אינטרנט",
+  "lang": "he",
+  "dir": "rtl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f1f5f3",
+  "theme_color": "#155c54",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>בודק ללא גלוטן</title>
+<meta name="description" content="בדיקת מוצרים ללא גלוטן לחולי צליאק – רמי לוי, שופרסל, יוחננוף, יש חסד ואושר עד. עובד גם בלי אינטרנט.">
+<meta name="theme-color" content="#155c54">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="ללא גלוטן">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <svg class="logo" viewBox="0 0 64 64" aria-hidden="true"><use href="icons/icon.svg#mark"/></svg>
+    <div>
+      <h1>בודק ללא גלוטן</h1>
+      <div id="dataInfo" class="data-info">טוען נתונים…</div>
+    </div>
+  </div>
+  <div class="top-actions">
+    <span id="netBadge" class="net" hidden>אופליין</span>
+    <a class="help-btn" href="help.html" aria-label="מדריך למשתמש" title="מדריך למשתמש">?</a>
+    <button id="installBtn" class="install-btn" type="button" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+      <span>התקנה</span>
+    </button>
+  </div>
+</header>
+<div class="aid-bar" role="note">⚠ כלי עזר בלבד – אינו אישור למוצרים. יש לבדוק תמיד את האריזה. <a href="terms.html">תנאי שימוש</a></div>
+<div id="staleBanner" class="banner warn" hidden></div>
+<div id="updateBanner" class="banner info" hidden></div>
+<div class="search-wrap">
+  <div class="searchbar">
+    <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input id="q" type="search" inputmode="search" autocomplete="off" enterkeyhint="search"
+           placeholder="שם מוצר, מותג או ברקוד" aria-label="חיפוש מוצר" aria-autocomplete="list" aria-controls="suggest">
+    <button id="clearQ" class="icon-btn" type="button" aria-label="ניקוי" hidden>✕</button>
+  </div>
+  <button id="scanBtn" class="scan-btn" type="button" aria-label="סריקת ברקוד">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 8v8M10 8v8M13 8v8M17 8v8"/></svg>
+    <span>סריקה</span>
+  </button>
+  <ul id="suggest" class="suggest" role="listbox" hidden></ul>
+</div>
+<section class="filters" aria-label="סינון">
+  <div class="chips" id="chainChips" role="group" aria-label="רשת"></div>
+  <div class="selects">
+    <select id="deptSel" aria-label="מחלקה"><option value="">כל המחלקות</option></select>
+    <select id="groupSel" aria-label="סוג מוצר" disabled><option value="">כל סוגי המוצרים</option></select>
+  </div>
+  <div class="levels" id="levelSel" role="radiogroup" aria-label="אילו מוצרים להציג">
+    <button type="button" role="radio" data-level="green"><span class="dot st-marked"></span>מסומן ללא גלוטן</button>
+    <button type="button" role="radio" data-level="ok"><span class="dot st-marked"></span><span class="dot st-simple"></span>מסומן + פשוט</button>
+    <button type="button" role="radio" data-level="all">הכל</button>
+  </div>
+</section>
+<main id="main">
+  <div id="home" class="home"></div>
+  <div id="resultsHead" class="results-head" hidden></div>
+  <ul id="results" class="results"></ul>
+  <button id="more" class="more" type="button" hidden>הצג עוד</button>
+</main>
+<footer class="foot">
+  <div class="contact" id="contact"><h3>יוצר האפליקציה ויצירת קשר</h3><p><b>אלעד רומי</b></p><p><a href="mailto:romielad@gmail.com">romielad@gmail.com</a> · <a href="tel:+972503115159" dir="ltr">050-3115159</a></p><p class="muted">לדיווח על טעות במוצר, הצעה או שאלה.</p></div>
+  <p class="disclaimer"><strong>חשוב:</strong> האתר הוא כלי עזר בלבד ואינו מאשר שמוצר כלשהו נטול גלוטן או מתאים לחולי צליאק. המידע נאסף אוטומטית מאתרי הרשתות והיצרנים ועלול להיות שגוי או לא מעודכן. יש לבדוק תמיד את הסימון והרכיבים על גבי האריזה לפני קנייה ואכילה. <a class="link-btn" href="terms.html">תנאי שימוש והגבלת אחריות</a></p>
+  <p class="muted">© 2026 אלעד רומי. כל הזכויות שמורות.</p>
+  <p><a class="link-btn" href="help.html">מדריך למשתמש</a> · <button id="checkUpdate" class="link-btn" type="button">בדיקת עדכון נתונים</button> · <span id="version"></span></p>
+</footer>
+<dialog id="sheet" class="sheet" aria-labelledby="pName">
+  <form method="dialog" class="sheet-close"><button aria-label="סגירה">✕</button></form>
+  <div id="sheetBody"></div>
+</dialog>
+<div id="scanner" class="scanner" hidden role="dialog" aria-label="סריקת ברקוד">
+  <video id="video" playsinline muted></video>
+  <div class="frame" aria-hidden="true"><span></span></div>
+  <div class="scan-top">
+    <button id="scanClose" class="round" type="button" aria-label="סגירת הסריקה">✕</button>
+    <div id="scanMsg" class="scan-msg">כוונו את המצלמה לברקוד</div>
+  </div>
+  <form id="manualForm" class="manual">
+    <input id="manualCode" inputmode="numeric" pattern="[0-9]*" placeholder="או הקלידו ברקוד" aria-label="הקלדת ברקוד">
+    <button type="submit">חיפוש</button>
+  </form>
+</div>
+<template id="tplItem">
+  <li class="item"><button type="button">
+    <span class="strip"></span>
+    <img class="thumb" alt="" loading="lazy" decoding="async">
+    <span class="txt">
+      <span class="nm"></span>
+      <span class="meta"></span>
+    </span>
+    <span class="badge"></span>
+  </button></li>
+</template>
+<dialog id="consent" class="consent" aria-labelledby="consentTitle">
+  <div class="consent-head">
+    <svg class="logo" viewBox="0 0 64 64" aria-hidden="true"><use href="icons/icon.svg#mark"/></svg>
+    <h2 id="consentTitle">חשוב לדעת לפני שמתחילים</h2>
+  </div>
+  <div class="consent-body">
+    <p>האתר נועד לסייע באיתור מוצרים ללא גלוטן, אך <b>אינו מהווה מקור מידע מוסמך או אישור לבטיחות המוצרים</b>.</p>
+    <p><b>חובה לבדוק את סימוני היצרן על אריזת המוצר לפני כל צריכה.</b></p>
+    <p>השימוש באתר הוא באחריות המשתמש בלבד, בכפוף להוראות הדין.</p>
+    <p><a href="terms.html">לקריאת תנאי השימוש והגבלת האחריות המלאים ›</a></p>
+    <label class="consent-check"><input type="checkbox" id="consentCheck"> <span>קראתי והבנתי את תנאי השימוש והגבלת האחריות.</span></label>
+    <button id="consentBtn" class="consent-btn" type="button" disabled>מאשר וממשיך לאתר</button>
+  </div>
+</dialog>
+<script src="lib/minisearch.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
